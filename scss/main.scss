@@ -1,0 +1,137 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lexend+Deca&display=swap');
+
+// Background Color
+$background-color: hsl(233, 47%, 7%);
+$card-background-color: hsl(244, 38%, 16%);
+
+// Text Color
+$highlight-color: hsl(277, 64%, 61%);
+$main-color: hsl(0, 0%, 100%);
+$primary-color: hsla(0, 0%, 100%, 0.75);
+$secondary-color: hsla(0, 0%, 100%, 0.6);
+
+/*For Mobile first*/
+* {
+  box-sizing: border-box;
+}
+body {
+  background-color: $background-color;
+  margin: 0;
+  font-size: 10px; /*16px*/
+}
+
+.flex {
+  &-container {
+    background-color: $card-background-color;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 1.5rem;
+    border-radius: 0.65rem;
+    overflow: hidden;
+
+    &-picture {
+      background-color: $highlight-color;
+
+      .image1,
+      .image2 {
+        max-width: 100%;
+        mix-blend-mode: multiply;
+        display: block;
+      }
+      .image2 {
+        display: none;
+      }
+    }
+
+    &-text {
+      text-align: center;
+      width: 80%;
+      h2 {
+        color: $main-color;
+        font-family: 'Inter', sans-serif;
+        font-size: 1.8rem;
+
+        .insights {
+          color: $highlight-color;
+        }
+      }
+
+      p {
+        color: $primary-color;
+        font-family: 'Lexend Deca', sans-serif;
+        font-size: 1rem;
+      }
+
+      .flex-stats {
+        list-style: none;
+        padding: 0;
+
+        .stats {
+          color: $main-color;
+          font-family: 'Lexend Deca', sans-serif;
+          font-size: 1.4rem;
+          display: block;
+          line-height: 2rem;
+          padding: 1rem 0;
+        }
+        .stats-heading {
+          color: $secondary-color;
+          font-family: 'Inter', sans-serif;
+          text-transform: uppercase;
+          line-height: 1.2;
+        }
+      }
+    }
+  }
+}
+
+/*Designing for desktop*/
+@media only screen and (min-width: 992px) {
+  .flex-container {
+    max-width: 1200px;
+    width: fit-content;
+    height: min-content;
+    margin: 5.5rem auto;
+    display: flex;
+    flex-direction: row-reverse;
+
+    .image1 {
+      display: none;
+    }
+    .image2 {
+      display: block;
+      height: 100%;
+      max-width: 100%;
+    }
+    &-text {
+      text-align: left;
+      max-width: 40%;
+      margin: auto;
+
+      h2 {
+        width: 80%;
+        font-size: 2.4rem;
+      }
+      p {
+        width: 80%;
+      }
+    }
+    .flex-stats {
+      display: flex;
+      justify-content: space-between;
+      margin-top: 5rem;
+      width: 80%;
+    }
+  }
+}
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
