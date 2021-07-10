@@ -12,6 +12,12 @@ Users should be able to:
 
 ### Screenshot
 
+
+### Links
+
+- Solution URL: [solution](https://github.com/ZRShamim/Stats_preview_card_component)
+- Live Site URL: [live site](https://zrshamim.github.io/Stats_preview_card_component/dist/)
+- 
 ## My process
 
 -Mobile First Approach
